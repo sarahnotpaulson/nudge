@@ -16,114 +16,150 @@ interface Pattern {
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const PATTERNS: Pattern[] = [
-  { id: "jakobs-law", name: "Jakob's Law", category: "Familiarity", tagline: "Design like the sites users already know",
+  {
+    id: "jakobs-law", name: "Jakob's Law", category: "Familiarity", tagline: "Design like the sites users already know",
     description: "Users spend most of their time on other websites, so they prefer your site to work the same way as those they already know.",
     how: "Use patterns users recognize and expect. Prioritize comfort and familiarity over novelty.",
     examples: ["Standard navigation structures", "Industry-norm terminology", "Familiar icon conventions"],
     productExample: "Amazon's checkout mirrors every e-commerce pattern users have learned elsewhere — minimizing friction at the highest-stakes moment.",
-    keywords: ["navigation", "familiar", "standard", "usability", "convention", "mental model", "layout", "interface"] },
-  { id: "fitts-law", name: "Fitts's Law", category: "Motor Efficiency", tagline: "Make targets bigger and closer",
+    keywords: ["navigation", "familiar", "standard", "usability", "convention", "mental model", "layout", "interface"]
+  },
+  {
+    id: "fitts-law", name: "Fitts's Law", category: "Motor Efficiency", tagline: "Make targets bigger and closer",
     description: "The time to reach a target is a function of its size and distance. Larger, nearer targets are faster to click or tap.",
     how: "Make primary buttons large and accessible. Place frequently-used actions within close reach of natural hand positions.",
     examples: ["Large primary CTAs", "Touch-friendly tap targets", "Contextual action placement"],
     productExample: "Spotify's play button is the largest element on any album page — one tap from wherever your thumb naturally rests.",
-    keywords: ["button", "click", "tap", "mobile", "size", "touch", "accessibility", "target", "cta"] },
-  { id: "hicks-law", name: "Hick's Law", category: "Decision Making", tagline: "Fewer choices, faster decisions",
+    keywords: ["button", "click", "tap", "mobile", "size", "touch", "accessibility", "target", "cta"]
+  },
+  {
+    id: "hicks-law", name: "Hick's Law", category: "Decision Making", tagline: "Fewer choices, faster decisions",
     description: "Decision time increases with the number and complexity of choices. Reducing options reduces cognitive work and accelerates action.",
     how: "Present only the most relevant options. Use progressive disclosure and highlight recommended actions.",
     examples: ["Curated onboarding paths", "Filtered dropdown menus", "Recommended option highlighting"],
     productExample: "Netflix curates ~40 titles for each user rather than exposing all 15,000 — preventing the paralysis of infinite choice.",
-    keywords: ["choice", "options", "menu", "simplify", "filter", "decision", "overwhelm", "onboarding", "pricing"] },
-  { id: "feedback-loops", name: "Feedback Loops", category: "Engagement", tagline: "Respond immediately to every action",
+    keywords: ["choice", "options", "menu", "simplify", "filter", "decision", "overwhelm", "onboarding", "pricing"]
+  },
+  {
+    id: "feedback-loops", name: "Feedback Loops", category: "Engagement", tagline: "Respond immediately to every action",
     description: "Immediate responses to user actions reinforce engagement and create a sense of control and progress.",
     how: "Design timely, meaningful responses to every user action. Reinforce positive behaviors with visible confirmation.",
     examples: ["Real-time form validation", "Progress indicators", "Completion confirmations"],
     productExample: "Duolingo shows an animated streak flame and confetti burst upon lesson completion — behavioral reinforcement made visceral.",
-    keywords: ["feedback", "response", "loading", "confirmation", "progress", "animation", "validation", "real-time"] },
-  { id: "gestalt-principles", name: "Gestalt Principles", category: "Visual Perception", tagline: "Group what belongs together",
+    keywords: ["feedback", "response", "loading", "confirmation", "progress", "animation", "validation", "real-time"]
+  },
+  {
+    id: "gestalt-principles", name: "Gestalt Principles", category: "Visual Perception", tagline: "Group what belongs together",
     description: "People naturally perceive visual elements in groups — by proximity, similarity, and continuity. Design with this in mind.",
     how: "Organize elements to reflect natural perception. Use proximity and similarity to reveal structure and hierarchy.",
     examples: ["Dashboard feature grouping", "Consistent spacing rhythms", "Visual contrast for hierarchy"],
     productExample: "Linear groups issues by project and status — proximity and color similarity communicate team structure at a glance.",
-    keywords: ["visual", "layout", "grouping", "design", "hierarchy", "spacing", "organization", "proximity", "similarity"] },
-  { id: "temporal-discounting", name: "Temporal Discounting", category: "Motivation", tagline: "Emphasize now over later",
+    keywords: ["visual", "layout", "grouping", "design", "hierarchy", "spacing", "organization", "proximity", "similarity"]
+  },
+  {
+    id: "temporal-discounting", name: "Temporal Discounting", category: "Motivation", tagline: "Emphasize now over later",
     description: "Users prefer immediate rewards over delayed benefits. The further away a reward, the less motivating it becomes.",
     how: "Emphasize short-term benefits and instant value. Show users what they gain today, not in 90 days.",
     examples: ["'Up in 5 minutes' promises", "Immediate feature previews", "Quick-win first steps"],
     productExample: "Notion's onboarding leads with 'Start writing in seconds' — deferring complexity until users already feel value.",
-    keywords: ["reward", "immediate", "onboarding", "quick", "instant", "benefit", "delay", "motivation", "activation"] },
-  { id: "peak-end-rule", name: "Peak-End Rule", category: "Memory", tagline: "End on a high note",
+    keywords: ["reward", "immediate", "onboarding", "quick", "instant", "benefit", "delay", "motivation", "activation"]
+  },
+  {
+    id: "peak-end-rule", name: "Peak-End Rule", category: "Memory", tagline: "End on a high note",
     description: "Experiences are remembered by their most intense moment and their ending — not their average quality.",
     how: "Craft impactful moments at critical interactions. Always close workflows with a strong, positive moment.",
     examples: ["Celebratory task completion screens", "Value-driven trial endings", "Milestone animations"],
     productExample: "Mailchimp's 'High Five' screen after sending a campaign is peak-end design — the moment users remember and share.",
-    keywords: ["celebration", "completion", "memory", "ending", "moment", "milestone", "experience", "delight", "emotion"] },
-  { id: "framing-effect", name: "Framing Effect", category: "Perception", tagline: "How you say it shapes how it's received",
+    keywords: ["celebration", "completion", "memory", "ending", "moment", "milestone", "experience", "delight", "emotion"]
+  },
+  {
+    id: "framing-effect", name: "Framing Effect", category: "Perception", tagline: "How you say it shapes how it's received",
     description: "Presenting information differently shapes emotions and decisions — even when the underlying facts are identical.",
     how: "Present choices aligned with user motivations. Frame benefits as solutions to pain points, not feature lists.",
     examples: ["'Save 20%' vs '20% off'", "Benefit-led pricing tables", "Loss vs gain framing in copy"],
     productExample: "Dropbox frames storage limits as 'running out of space to save memories' — loss framing instead of feature marketing.",
-    keywords: ["messaging", "copy", "pricing", "framing", "wording", "language", "marketing", "conversion", "persuasion"] },
-  { id: "zeigarnik-effect", name: "Zeigarnik Effect", category: "Completion Drive", tagline: "Incomplete tasks demand attention",
+    keywords: ["messaging", "copy", "pricing", "framing", "wording", "language", "marketing", "conversion", "persuasion"]
+  },
+  {
+    id: "zeigarnik-effect", name: "Zeigarnik Effect", category: "Completion Drive", tagline: "Incomplete tasks demand attention",
     description: "People remember incomplete tasks better than completed ones. Unfinished work creates productive cognitive tension.",
     how: "Use visual indicators that emphasize unfinished actions. Progress bars trigger the natural desire to complete.",
     examples: ["Onboarding progress bars", "Checklist-based workflows", "Profile completion meters"],
     productExample: "LinkedIn's profile completion meter ('Your profile is 60% complete') is textbook Zeigarnik — users feel compelled to finish.",
-    keywords: ["progress", "completion", "checklist", "onboarding", "streak", "reminder", "retention", "percentage"] },
-  { id: "reciprocity", name: "Reciprocity Principle", category: "Relationship", tagline: "Give first, receive later",
+    keywords: ["progress", "completion", "checklist", "onboarding", "streak", "reminder", "retention", "percentage"]
+  },
+  {
+    id: "reciprocity", name: "Reciprocity Principle", category: "Relationship", tagline: "Give first, receive later",
     description: "Giving value triggers a psychological inclination to reciprocate. People feel compelled to return what they receive.",
     how: "Offer genuine value upfront before asking for commitment. Make users feel the product is already working for them.",
     examples: ["Free templates and tools", "Early-access discounts", "Free onboarding consultations"],
     productExample: "HubSpot gives away entire marketing courses, certifications, and tools free — creating an obligation that converts to paid.",
-    keywords: ["free", "value", "gift", "conversion", "trust", "give", "offer", "trial", "freemium", "lead"] },
-  { id: "personalization", name: "Personalization", category: "Relevance", tagline: "Make it feel built for them",
+    keywords: ["free", "value", "gift", "conversion", "trust", "give", "offer", "trial", "freemium", "lead"]
+  },
+  {
+    id: "personalization", name: "Personalization", category: "Relevance", tagline: "Make it feel built for them",
     description: "Tailoring experiences to individual behaviors and needs enhances relevance, retention, and emotional connection.",
     how: "Use behavioral data to customize flows and content. Enable users to shape their own experience.",
     examples: ["Segmented onboarding flows", "Tailored feature recommendations", "Customizable dashboards"],
     productExample: "Spotify Wrapped turns a year of listening data into a deeply personal narrative — making each user feel uniquely understood.",
-    keywords: ["personal", "customize", "recommendation", "user data", "tailored", "segment", "relevant", "dashboard"] },
-  { id: "emotional-design", name: "Emotional Design", category: "Connection", tagline: "Design that makes users feel something",
+    keywords: ["personal", "customize", "recommendation", "user data", "tailored", "segment", "relevant", "dashboard"]
+  },
+  {
+    id: "emotional-design", name: "Emotional Design", category: "Connection", tagline: "Design that makes users feel something",
     description: "Visual and interactive elements that evoke positive emotions create stronger connections and longer retention.",
     how: "Craft interactions that make users feel understood and valued. Use language and motion with human warmth.",
     examples: ["Milestone celebrations", "Humanized error messages", "Playful micro-interactions"],
     productExample: "Headspace's animated characters respond to your mood — turning a data input into an emotional exchange.",
-    keywords: ["emotion", "delight", "animation", "copy", "brand", "human", "celebration", "warmth", "micro-interaction"] },
-  { id: "habit-formation", name: "Habit Formation", category: "Retention", tagline: "Build triggers that bring users back",
+    keywords: ["emotion", "delight", "animation", "copy", "brand", "human", "celebration", "warmth", "micro-interaction"]
+  },
+  {
+    id: "habit-formation", name: "Habit Formation", category: "Retention", tagline: "Build triggers that bring users back",
     description: "Habits form by linking triggers, routines, and rewards. Products that slot into existing routines persist.",
     how: "Design triggers and rewards that make returning feel natural. Anchor the product to existing daily routines.",
     examples: ["Usage streaks and badges", "Routine-anchored notifications", "Reward milestones"],
     productExample: "Wordle's daily constraint — one puzzle per day — creates a calendar-anchored ritual users build their morning around.",
-    keywords: ["habit", "streak", "daily", "retention", "notification", "reward", "routine", "engagement", "return"] },
-  { id: "anchoring-bias", name: "Anchoring Bias", category: "Pricing & Perception", tagline: "The first number sets the frame",
+    keywords: ["habit", "streak", "daily", "retention", "notification", "reward", "routine", "engagement", "return"]
+  },
+  {
+    id: "anchoring-bias", name: "Anchoring Bias", category: "Pricing & Perception", tagline: "The first number sets the frame",
     description: "The first piece of information encountered disproportionately influences all subsequent judgments and comparisons.",
     how: "Present key reference points early. Show premium tiers first to make standard options feel more attractive.",
     examples: ["Premium-first pricing tables", "Crossed-out original prices", "Flagship feature prominence"],
     productExample: "Apple always leads with the Pro model at $1,599 — making the $999 MacBook Air feel like a bargain by contrast.",
-    keywords: ["price", "anchor", "comparison", "premium", "discount", "value", "perception", "tier", "pricing"] },
-  { id: "loss-aversion", name: "Loss Aversion", category: "Motivation", tagline: "Fear of losing beats hope of gaining",
+    keywords: ["price", "anchor", "comparison", "premium", "discount", "value", "perception", "tier", "pricing"]
+  },
+  {
+    id: "loss-aversion", name: "Loss Aversion", category: "Motivation", tagline: "Fear of losing beats hope of gaining",
     description: "People are twice as motivated to avoid losses as they are to acquire equivalent gains. Losses feel disproportionately painful.",
     how: "Frame messages around what users risk losing. Create urgency around expiring opportunities.",
     examples: ["'Don't lose your streak'", "Trial expiration countdowns", "Feature loss warnings on downgrade"],
     productExample: "Snapchat's streak counter — with its urgent fire emoji — uses loss aversion to keep users returning every single day.",
-    keywords: ["urgency", "loss", "expiry", "fear", "retention", "churn", "downgrade", "limit", "deadline"] },
-  { id: "social-proof", name: "Social Proof", category: "Trust", tagline: "People follow what others are doing",
+    keywords: ["urgency", "loss", "expiry", "fear", "retention", "churn", "downgrade", "limit", "deadline"]
+  },
+  {
+    id: "social-proof", name: "Social Proof", category: "Trust", tagline: "People follow what others are doing",
     description: "Humans look to others' actions and endorsements to guide decisions, especially under uncertainty.",
     how: "Highlight user success stories and visible endorsements. Show real-time usage and community signals.",
     examples: ["Customer testimonials", "Brand logo displays", "Real-time user counts"],
     productExample: "Booking.com shows '23 people viewing this hotel right now' — live social proof that creates urgency and trust simultaneously.",
-    keywords: ["testimonial", "reviews", "trust", "credibility", "community", "users", "social", "proof", "endorsement"] },
-  { id: "decision-fatigue", name: "Decision Fatigue", category: "Cognitive Relief", tagline: "Decisions exhaust — reduce them",
+    keywords: ["testimonial", "reviews", "trust", "credibility", "community", "users", "social", "proof", "endorsement"]
+  },
+  {
+    id: "decision-fatigue", name: "Decision Fatigue", category: "Cognitive Relief", tagline: "Decisions exhaust — reduce them",
     description: "Too many decisions deplete cognitive resources. As mental energy drops, users default to avoidance or poor choices.",
     how: "Guide users through essential actions only. Set intelligent defaults that handle decisions before users have to.",
     examples: ["New-user templates", "Smart default selections", "Recommended action highlighting"],
     productExample: "Figma's 'Start from template' option short-circuits the blank-canvas paralysis that kills new user activation.",
-    keywords: ["decision", "default", "template", "choice", "simplify", "guide", "cognitive", "onboarding", "overwhelm"] },
-  { id: "cognitive-load", name: "Cognitive Load", category: "Clarity", tagline: "Working memory is small — honor it",
+    keywords: ["decision", "default", "template", "choice", "simplify", "guide", "cognitive", "onboarding", "overwhelm"]
+  },
+  {
+    id: "cognitive-load", name: "Cognitive Load", category: "Clarity", tagline: "Working memory is small — honor it",
     description: "Mental effort required to process information is finite. Overloaded users make errors, slow down, and disengage.",
     how: "Simplify user journeys. Break complex tasks into digestible steps. Use progressive disclosure of complexity.",
     examples: ["Step-by-step onboarding", "Related feature grouping", "Chunked form flows"],
     productExample: "Stripe's payment flow asks for the minimum at each step — card number, then expiry, then CVC — never all at once.",
-    keywords: ["complexity", "form", "steps", "progressive", "clarity", "simplify", "chunking", "overload", "wizard"] },
+    keywords: ["complexity", "form", "steps", "progressive", "clarity", "simplify", "chunking", "overload", "wizard"]
+  },
 ];
 
 // ─── Utilities ────────────────────────────────────────────────────────────────
@@ -139,10 +175,53 @@ function scorePatterns(query: string, patterns: Pattern[]): Pattern[] {
   return scored.sort((a, b) => b.score - a.score).slice(0, 3).map((s) => s.p);
 }
 
-function generateExplanation(query: string, patterns: Pattern[]): string {
-  const [p1, p2, p3] = patterns;
-  const q = query.length > 55 ? query.slice(0, 55) + "…" : query;
-  return `For "${q}", three behavioral patterns offer the clearest path forward.\n\n**${p1.name}** is your primary lever — ${p1.tagline.toLowerCase()}. ${p1.how}\n\n**${p2.name}** strengthens the approach: ${p2.tagline.toLowerCase()}. Apply this through ${p2.examples[0].toLowerCase()}.\n\n**${p3.name}** closes the loop. ${p3.how} Together these patterns address the cognitive, motivational, and behavioral dimensions of your challenge.`;
+
+async function generateExplanation(
+  query: string,
+  patterns: Pattern[],
+  conversationHistory: Message[] = []
+): Promise<string> {
+  const patternList = patterns.map(p =>
+    `- ${p.name}: ${p.tagline}. ${p.how}`
+  ).join('\n');
+
+  const messages = [
+    {
+      role: 'user' as const,
+      content: `You are a behavioral design expert helping designers apply psychology to product problems. 
+The top recommended patterns for this conversation are:
+${patternList}
+
+Be conversational, direct, and practical. Reference what the user said before when relevant. Use **bold** for pattern names.`
+    },
+    {
+      role: 'assistant' as const,
+      content: 'Understood. I\'m ready to help apply these behavioral patterns to your product challenge.'
+    },
+    ...conversationHistory.map(m => ({
+      role: m.role === 'ai' ? 'assistant' as const : 'user' as const,
+      content: m.content
+    })),
+    { role: 'user' as const, content: query }
+  ];
+
+  const response = await fetch('/api/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': import.meta.env.VITE_ANTHROPIC_KEY,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-5',
+      max_tokens: 400,
+      messages
+    })
+  });
+
+  const data = await response.json();
+  return data.content[0].text;
 }
 
 function generatePatternInsight(pattern: Pattern, userContext: string): string {
@@ -200,76 +279,76 @@ function DemoShell({ before, after, beforeLabel = "Without pattern", afterLabel 
 function PatternDemo({ patternId }: { patternId: string }) {
   const demos: Record<string, React.ReactNode> = {
     "jakobs-law": (<DemoShell beforeLabel="Unfamiliar layout" afterLabel="Standard layout"
-      before={<div className="w-full p-6"><div className="bg-background rounded-lg border border-border p-4"><div className="flex flex-col items-center gap-3 mb-4"><div className="w-8 h-1 bg-foreground/20 rounded"/><div className="w-6 h-1 bg-foreground/20 rounded"/><div className="w-10 h-1 bg-foreground/20 rounded"/></div><div className="text-center text-xs text-muted-foreground mb-4">Menu hidden in sidebar icon</div><div className="flex flex-wrap gap-2 justify-center">{["☰ Open nav","↗ Go back","✦ Search?","⋯ More"].map(l=><div key={l} className="text-xs px-2 py-1 border border-border rounded text-muted-foreground">{l}</div>)}</div></div></div>}
+      before={<div className="w-full p-6"><div className="bg-background rounded-lg border border-border p-4"><div className="flex flex-col items-center gap-3 mb-4"><div className="w-8 h-1 bg-foreground/20 rounded" /><div className="w-6 h-1 bg-foreground/20 rounded" /><div className="w-10 h-1 bg-foreground/20 rounded" /></div><div className="text-center text-xs text-muted-foreground mb-4">Menu hidden in sidebar icon</div><div className="flex flex-wrap gap-2 justify-center">{["☰ Open nav", "↗ Go back", "✦ Search?", "⋯ More"].map(l => <div key={l} className="text-xs px-2 py-1 border border-border rounded text-muted-foreground">{l}</div>)}</div></div></div>}
       after={<div className="w-full p-6"><div className="bg-background rounded-lg border border-border overflow-hidden"><div className="border-b border-border px-4 py-3 flex items-center justify-between"><span className="font-medium text-sm">MyApp</span><div className="flex items-center gap-4 text-xs text-muted-foreground"><span>Features</span><span>Pricing</span><span>Docs</span><span className="bg-foreground text-background px-3 py-1 rounded-full">Sign up</span></div></div><div className="p-6 text-center"><div className="text-sm font-medium mb-1">Standard navigation</div><div className="text-xs text-muted-foreground">Users know exactly where everything is</div></div></div></div>}
     />),
     "fitts-law": (<DemoShell beforeLabel="Hard to click" afterLabel="Easy to click"
-      before={<div className="w-full p-8 flex flex-col gap-4 items-center"><div className="text-xs text-muted-foreground mb-2">Subscribe to our newsletter</div><input className="border border-border rounded px-2 py-1 text-xs w-48 bg-background" placeholder="your@email.com" readOnly/><div className="flex gap-8 mt-2"><a className="text-[10px] underline text-muted-foreground">maybe later</a><a className="text-[10px] underline text-accent">subscribe</a></div><p className="text-xs text-muted-foreground/60 mt-2">Tiny targets scattered far apart</p></div>}
-      after={<div className="w-full p-8 flex flex-col gap-4 items-center"><div className="text-xs text-muted-foreground mb-2">Subscribe to our newsletter</div><input className="border border-border rounded-lg px-3 py-2 text-sm w-56 bg-background" placeholder="your@email.com" readOnly/><button className="bg-foreground text-background text-sm font-medium px-8 py-3 rounded-full w-56">Subscribe now</button><p className="text-[10px] text-muted-foreground/60">Dismiss</p></div>}
+      before={<div className="w-full p-8 flex flex-col gap-4 items-center"><div className="text-xs text-muted-foreground mb-2">Subscribe to our newsletter</div><input className="border border-border rounded px-2 py-1 text-xs w-48 bg-background" placeholder="your@email.com" readOnly /><div className="flex gap-8 mt-2"><a className="text-[10px] underline text-muted-foreground">maybe later</a><a className="text-[10px] underline text-accent">subscribe</a></div><p className="text-xs text-muted-foreground/60 mt-2">Tiny targets scattered far apart</p></div>}
+      after={<div className="w-full p-8 flex flex-col gap-4 items-center"><div className="text-xs text-muted-foreground mb-2">Subscribe to our newsletter</div><input className="border border-border rounded-lg px-3 py-2 text-sm w-56 bg-background" placeholder="your@email.com" readOnly /><button className="bg-foreground text-background text-sm font-medium px-8 py-3 rounded-full w-56">Subscribe now</button><p className="text-[10px] text-muted-foreground/60">Dismiss</p></div>}
     />),
     "hicks-law": (<DemoShell beforeLabel="Too many options" afterLabel="Curated choices"
-      before={<div className="w-full p-4"><div className="text-xs text-center text-muted-foreground mb-3">Choose your plan:</div><div className="grid grid-cols-4 gap-1.5">{["Micro","Starter","Basic","Pro","Business","Growth","Agency","Enterprise"].map(t=><div key={t} className="border border-border p-2 rounded text-center text-[10px]"><div className="font-medium">{t}</div><div className="text-muted-foreground">$?/mo</div></div>)}</div></div>}
-      after={<div className="w-full p-5"><div className="text-xs text-center text-muted-foreground mb-3">Choose your plan:</div><div className="grid grid-cols-3 gap-3">{[{n:"Starter",p:"$9",d:"For individuals"},{n:"Pro",p:"$29",d:"Most popular",rec:true},{n:"Team",p:"$79",d:"For teams"}].map(t=><div key={t.n} className={`p-3 rounded-xl border text-center text-xs ${t.rec?"border-foreground bg-foreground text-background":"border-border"}`}>{t.rec&&<div className="text-[9px] font-mono mb-1 opacity-70">RECOMMENDED</div>}<div className="font-semibold">{t.n}</div><div className="text-lg font-bold my-1">{t.p}<span className="text-[9px] font-normal opacity-70">/mo</span></div><div className={`text-[10px] ${t.rec?"opacity-70":"text-muted-foreground"}`}>{t.d}</div></div>)}</div></div>}
+      before={<div className="w-full p-4"><div className="text-xs text-center text-muted-foreground mb-3">Choose your plan:</div><div className="grid grid-cols-4 gap-1.5">{["Micro", "Starter", "Basic", "Pro", "Business", "Growth", "Agency", "Enterprise"].map(t => <div key={t} className="border border-border p-2 rounded text-center text-[10px]"><div className="font-medium">{t}</div><div className="text-muted-foreground">$?/mo</div></div>)}</div></div>}
+      after={<div className="w-full p-5"><div className="text-xs text-center text-muted-foreground mb-3">Choose your plan:</div><div className="grid grid-cols-3 gap-3">{[{ n: "Starter", p: "$9", d: "For individuals" }, { n: "Pro", p: "$29", d: "Most popular", rec: true }, { n: "Team", p: "$79", d: "For teams" }].map(t => <div key={t.n} className={`p-3 rounded-xl border text-center text-xs ${t.rec ? "border-foreground bg-foreground text-background" : "border-border"}`}>{t.rec && <div className="text-[9px] font-mono mb-1 opacity-70">RECOMMENDED</div>}<div className="font-semibold">{t.n}</div><div className="text-lg font-bold my-1">{t.p}<span className="text-[9px] font-normal opacity-70">/mo</span></div><div className={`text-[10px] ${t.rec ? "opacity-70" : "text-muted-foreground"}`}>{t.d}</div></div>)}</div></div>}
     />),
     "feedback-loops": (<DemoShell beforeLabel="Silent form" afterLabel="Live validation"
       before={<div className="w-full p-6"><div className="space-y-3 max-w-xs mx-auto"><div><div className="text-xs font-medium mb-1">Email</div><div className="border border-border rounded px-3 py-2 text-xs text-muted-foreground bg-background">john@</div></div><div><div className="text-xs font-medium mb-1">Password</div><div className="border border-border rounded px-3 py-2 text-xs text-muted-foreground bg-background">••••••</div></div><button className="w-full bg-foreground text-background text-xs py-2 rounded mt-2">Submit</button><p className="text-[10px] text-muted-foreground text-center">No feedback until after submit</p></div></div>}
-      after={<div className="w-full p-6"><div className="space-y-3 max-w-xs mx-auto"><div><div className="text-xs font-medium mb-1">Email</div><div className="border border-destructive rounded px-3 py-2 text-xs text-muted-foreground bg-background flex items-center justify-between"><span>john@</span><span className="text-destructive text-[10px]">Invalid email</span></div></div><div><div className="text-xs font-medium mb-1">Password</div><div className="border border-accent rounded px-3 py-2 text-xs text-muted-foreground bg-background flex items-center justify-between"><span>••••••••</span><span className="text-accent text-[10px]">✓ Strong</span></div></div><div className="h-1 bg-muted rounded-full overflow-hidden"><div className="h-full bg-accent rounded-full w-3/4"/></div><p className="text-[10px] text-muted-foreground text-center">Instant feedback at every step</p></div></div>}
+      after={<div className="w-full p-6"><div className="space-y-3 max-w-xs mx-auto"><div><div className="text-xs font-medium mb-1">Email</div><div className="border border-destructive rounded px-3 py-2 text-xs text-muted-foreground bg-background flex items-center justify-between"><span>john@</span><span className="text-destructive text-[10px]">Invalid email</span></div></div><div><div className="text-xs font-medium mb-1">Password</div><div className="border border-accent rounded px-3 py-2 text-xs text-muted-foreground bg-background flex items-center justify-between"><span>••••••••</span><span className="text-accent text-[10px]">✓ Strong</span></div></div><div className="h-1 bg-muted rounded-full overflow-hidden"><div className="h-full bg-accent rounded-full w-3/4" /></div><p className="text-[10px] text-muted-foreground text-center">Instant feedback at every step</p></div></div>}
     />),
     "gestalt-principles": (<DemoShell beforeLabel="No grouping" afterLabel="Clear groups"
-      before={<div className="w-full p-5"><div className="flex flex-wrap gap-2 justify-center">{["Analytics","Users","Revenue","Support","Settings","Profile","Export","Import","Reports","Team","Billing","API"].map(item=><div key={item} className="border border-border px-2 py-1 rounded text-[10px] text-muted-foreground">{item}</div>)}</div></div>}
-      after={<div className="w-full p-5"><div className="grid grid-cols-2 gap-3">{[{g:"Data",items:["Analytics","Reports","Export"]},{g:"People",items:["Users","Team","Support"]},{g:"Finance",items:["Revenue","Billing"]},{g:"System",items:["Settings","API","Profile"]}].map(group=><div key={group.g} className="bg-background rounded-lg p-3 border border-border"><div className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground mb-2">{group.g}</div><div className="flex flex-wrap gap-1">{group.items.map(i=><div key={i} className="text-[10px] px-2 py-0.5 bg-muted rounded text-foreground">{i}</div>)}</div></div>)}</div></div>}
+      before={<div className="w-full p-5"><div className="flex flex-wrap gap-2 justify-center">{["Analytics", "Users", "Revenue", "Support", "Settings", "Profile", "Export", "Import", "Reports", "Team", "Billing", "API"].map(item => <div key={item} className="border border-border px-2 py-1 rounded text-[10px] text-muted-foreground">{item}</div>)}</div></div>}
+      after={<div className="w-full p-5"><div className="grid grid-cols-2 gap-3">{[{ g: "Data", items: ["Analytics", "Reports", "Export"] }, { g: "People", items: ["Users", "Team", "Support"] }, { g: "Finance", items: ["Revenue", "Billing"] }, { g: "System", items: ["Settings", "API", "Profile"] }].map(group => <div key={group.g} className="bg-background rounded-lg p-3 border border-border"><div className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground mb-2">{group.g}</div><div className="flex flex-wrap gap-1">{group.items.map(i => <div key={i} className="text-[10px] px-2 py-0.5 bg-muted rounded text-foreground">{i}</div>)}</div></div>)}</div></div>}
     />),
     "temporal-discounting": (<DemoShell beforeLabel="Delayed benefit" afterLabel="Instant value"
-      before={<div className="w-full p-8 text-center"><div className="text-2xl font-bold mb-2" style={{fontFamily:"Instrument Serif"}}>Start your 30-day trial</div><p className="text-xs text-muted-foreground mb-5">You'll see results in about a month of consistent use.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Start Trial</button></div>}
-      after={<div className="w-full p-8 text-center"><div className="text-2xl font-bold mb-2" style={{fontFamily:"Instrument Serif"}}>Up and running in 5 minutes</div><p className="text-xs text-muted-foreground mb-2">Your first report is ready <strong>before you finish your coffee.</strong></p><div className="flex justify-center gap-3 mb-4 text-[10px] text-accent"><span>✓ No setup</span><span>✓ Import in one click</span><span>✓ Instant preview</span></div><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">See it now →</button></div>}
+      before={<div className="w-full p-8 text-center"><div className="text-2xl font-bold mb-2" style={{ fontFamily: "Instrument Serif" }}>Start your 30-day trial</div><p className="text-xs text-muted-foreground mb-5">You'll see results in about a month of consistent use.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Start Trial</button></div>}
+      after={<div className="w-full p-8 text-center"><div className="text-2xl font-bold mb-2" style={{ fontFamily: "Instrument Serif" }}>Up and running in 5 minutes</div><p className="text-xs text-muted-foreground mb-2">Your first report is ready <strong>before you finish your coffee.</strong></p><div className="flex justify-center gap-3 mb-4 text-[10px] text-accent"><span>✓ No setup</span><span>✓ Import in one click</span><span>✓ Instant preview</span></div><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">See it now →</button></div>}
     />),
     "peak-end-rule": (<DemoShell beforeLabel="Flat completion" afterLabel="Peak moment"
       before={<div className="w-full p-8 text-center"><div className="text-4xl mb-3">✓</div><div className="text-sm font-medium">Done.</div><p className="text-xs text-muted-foreground mt-2">Report created.</p><button className="mt-5 text-xs text-muted-foreground underline">Back to dashboard</button></div>}
-      after={<div className="w-full p-8 text-center"><motion.div animate={{scale:[1,1.2,1],rotate:[0,10,-10,0]}} transition={{duration:1,repeat:Infinity,repeatDelay:2}} className="text-4xl mb-3">🎉</motion.div><div className="text-lg font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>Your report is live!</div><p className="text-xs text-muted-foreground mb-4">3,847 users can see it right now. Nice work.</p><div className="flex justify-center gap-2"><button className="bg-foreground text-background text-xs px-4 py-2 rounded-full">Share it</button><button className="border border-border text-xs px-4 py-2 rounded-full">View report</button></div></div>}
+      after={<div className="w-full p-8 text-center"><motion.div animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }} transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }} className="text-4xl mb-3">🎉</motion.div><div className="text-lg font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>Your report is live!</div><p className="text-xs text-muted-foreground mb-4">3,847 users can see it right now. Nice work.</p><div className="flex justify-center gap-2"><button className="bg-foreground text-background text-xs px-4 py-2 rounded-full">Share it</button><button className="border border-border text-xs px-4 py-2 rounded-full">View report</button></div></div>}
     />),
     "framing-effect": (<DemoShell beforeLabel="Neutral framing" afterLabel="Loss framing"
       before={<div className="w-full p-6 space-y-3"><div className="bg-background border border-border rounded-xl p-4 text-center"><div className="text-2xl font-bold mb-1">Pro Plan</div><div className="text-xs text-muted-foreground mb-3">Get additional storage and features</div><button className="bg-foreground text-background text-xs px-5 py-2 rounded-full">Upgrade to Pro</button></div></div>}
-      after={<div className="w-full p-6 space-y-3"><div className="bg-foreground text-background rounded-xl p-4 text-center"><div className="text-xs font-mono opacity-50 mb-1">⚠ STORAGE NEARLY FULL</div><div className="text-lg font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>Don't lose 3 years of work</div><div className="text-xs opacity-70 mb-3">Your files will be deleted in 7 days if you don't upgrade.</div><button className="bg-card text-foreground text-xs px-5 py-2 rounded-full font-medium">Protect my files</button></div></div>}
+      after={<div className="w-full p-6 space-y-3"><div className="bg-foreground text-background rounded-xl p-4 text-center"><div className="text-xs font-mono opacity-50 mb-1">⚠ STORAGE NEARLY FULL</div><div className="text-lg font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>Don't lose 3 years of work</div><div className="text-xs opacity-70 mb-3">Your files will be deleted in 7 days if you don't upgrade.</div><button className="bg-card text-foreground text-xs px-5 py-2 rounded-full font-medium">Protect my files</button></div></div>}
     />),
     "zeigarnik-effect": (<DemoShell beforeLabel="No progress" afterLabel="Progress visible"
-      before={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-4 max-w-xs mx-auto"><div className="font-medium text-sm mb-3">Your Profile</div><div className="flex items-center gap-3 mb-4"><div className="w-10 h-10 rounded-full bg-muted"/><div><div className="text-sm">Alex Kim</div><div className="text-xs text-muted-foreground">alex@company.com</div></div></div><div className="text-xs text-muted-foreground">Member since 2024</div></div></div>}
-      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-4 max-w-xs mx-auto"><div className="flex items-center justify-between mb-2"><div className="font-medium text-sm">Your Profile</div><div className="text-xs font-mono text-accent">65%</div></div><div className="h-1.5 bg-muted rounded-full overflow-hidden mb-3"><motion.div initial={{width:0}} animate={{width:"65%"}} transition={{duration:1,ease:"easeOut"}} className="h-full bg-accent rounded-full"/></div><div className="flex items-center gap-3 mb-3"><div className="w-10 h-10 rounded-full bg-muted"/><div><div className="text-sm">Alex Kim</div><div className="text-xs text-muted-foreground">alex@company.com</div></div></div><div className="space-y-1.5">{[{l:"Add bio",done:true},{l:"Upload photo",done:false},{l:"Link portfolio",done:false}].map(item=><div key={item.l} className="flex items-center gap-2 text-[11px]"><div className={`w-3 h-3 rounded-full flex items-center justify-center ${item.done?"bg-accent":"border border-muted-foreground"}`}>{item.done&&<span className="text-background text-[8px]">✓</span>}</div><span className={item.done?"text-muted-foreground line-through":"text-foreground"}>{item.l}</span></div>)}</div></div></div>}
+      before={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-4 max-w-xs mx-auto"><div className="font-medium text-sm mb-3">Your Profile</div><div className="flex items-center gap-3 mb-4"><div className="w-10 h-10 rounded-full bg-muted" /><div><div className="text-sm">Alex Kim</div><div className="text-xs text-muted-foreground">alex@company.com</div></div></div><div className="text-xs text-muted-foreground">Member since 2024</div></div></div>}
+      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-4 max-w-xs mx-auto"><div className="flex items-center justify-between mb-2"><div className="font-medium text-sm">Your Profile</div><div className="text-xs font-mono text-accent">65%</div></div><div className="h-1.5 bg-muted rounded-full overflow-hidden mb-3"><motion.div initial={{ width: 0 }} animate={{ width: "65%" }} transition={{ duration: 1, ease: "easeOut" }} className="h-full bg-accent rounded-full" /></div><div className="flex items-center gap-3 mb-3"><div className="w-10 h-10 rounded-full bg-muted" /><div><div className="text-sm">Alex Kim</div><div className="text-xs text-muted-foreground">alex@company.com</div></div></div><div className="space-y-1.5">{[{ l: "Add bio", done: true }, { l: "Upload photo", done: false }, { l: "Link portfolio", done: false }].map(item => <div key={item.l} className="flex items-center gap-2 text-[11px]"><div className={`w-3 h-3 rounded-full flex items-center justify-center ${item.done ? "bg-accent" : "border border-muted-foreground"}`}>{item.done && <span className="text-background text-[8px]">✓</span>}</div><span className={item.done ? "text-muted-foreground line-through" : "text-foreground"}>{item.l}</span></div>)}</div></div></div>}
     />),
     "reciprocity": (<DemoShell beforeLabel="Ask first" afterLabel="Give first"
-      before={<div className="w-full p-8 text-center"><div className="text-xl font-bold mb-2" style={{fontFamily:"Instrument Serif"}}>Upgrade to Pro</div><p className="text-xs text-muted-foreground mb-5">Unlock all features for $29/month.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Start paying now</button></div>}
-      after={<div className="w-full p-8 text-center"><div className="text-3xl mb-2">🎁</div><div className="text-xl font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>Free for you, no strings</div><p className="text-xs text-muted-foreground mb-3">A complete guide to growing your audience. Yours to keep.</p><div className="inline-flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2 mb-4 text-xs"><span>📖</span><span className="font-medium">The Growth Playbook.pdf</span><span className="text-accent">↓</span></div><div className="block text-xs text-muted-foreground">Then, when ready: <span className="underline">explore Pro features</span></div></div>}
+      before={<div className="w-full p-8 text-center"><div className="text-xl font-bold mb-2" style={{ fontFamily: "Instrument Serif" }}>Upgrade to Pro</div><p className="text-xs text-muted-foreground mb-5">Unlock all features for $29/month.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Start paying now</button></div>}
+      after={<div className="w-full p-8 text-center"><div className="text-3xl mb-2">🎁</div><div className="text-xl font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>Free for you, no strings</div><p className="text-xs text-muted-foreground mb-3">A complete guide to growing your audience. Yours to keep.</p><div className="inline-flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2 mb-4 text-xs"><span>📖</span><span className="font-medium">The Growth Playbook.pdf</span><span className="text-accent">↓</span></div><div className="block text-xs text-muted-foreground">Then, when ready: <span className="underline">explore Pro features</span></div></div>}
     />),
     "personalization": (<DemoShell beforeLabel="Generic welcome" afterLabel="Personalized welcome"
-      before={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto"><div className="text-lg font-bold mb-1">Welcome back!</div><p className="text-xs text-muted-foreground mb-4">Here's what's new in the app this week.</p><div className="space-y-2">{["Feature update","New template library","Performance improvements"].map(i=><div key={i} className="text-xs flex items-center gap-2"><span className="text-accent">•</span>{i}</div>)}</div></div></div>}
-      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto"><div className="flex items-center gap-2 mb-3"><div className="w-7 h-7 rounded-full bg-accent/20 flex items-center justify-center text-xs font-bold text-accent">S</div><div className="text-[10px] text-muted-foreground">Good morning, Sarah</div></div><div className="text-base font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>Your team shipped 3 reports this week</div><p className="text-[11px] text-muted-foreground mb-3">You're 2 approvals away from your monthly goal.</p><div className="bg-card rounded-lg px-3 py-2 text-[11px]"><span className="font-medium">Suggested:</span> Review Q4 marketing brief →</div></div></div>}
+      before={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto"><div className="text-lg font-bold mb-1">Welcome back!</div><p className="text-xs text-muted-foreground mb-4">Here's what's new in the app this week.</p><div className="space-y-2">{["Feature update", "New template library", "Performance improvements"].map(i => <div key={i} className="text-xs flex items-center gap-2"><span className="text-accent">•</span>{i}</div>)}</div></div></div>}
+      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto"><div className="flex items-center gap-2 mb-3"><div className="w-7 h-7 rounded-full bg-accent/20 flex items-center justify-center text-xs font-bold text-accent">S</div><div className="text-[10px] text-muted-foreground">Good morning, Sarah</div></div><div className="text-base font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>Your team shipped 3 reports this week</div><p className="text-[11px] text-muted-foreground mb-3">You're 2 approvals away from your monthly goal.</p><div className="bg-card rounded-lg px-3 py-2 text-[11px]"><span className="font-medium">Suggested:</span> Review Q4 marketing brief →</div></div></div>}
     />),
     "emotional-design": (<DemoShell beforeLabel="Cold error" afterLabel="Human error"
       before={<div className="w-full p-8 text-center"><div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center mx-auto mb-3 text-xl">✕</div><div className="text-sm font-medium text-destructive mb-1">ERROR: 422 Unprocessable Entity</div><p className="text-xs text-muted-foreground mb-4">Request validation failed. Check input parameters.</p><button className="text-xs underline text-muted-foreground">Retry</button></div>}
-      after={<div className="w-full p-8 text-center"><motion.div animate={{rotate:[-5,5,-5]}} transition={{duration:1,repeat:Infinity}} className="text-4xl mb-3">😬</motion.div><div className="text-base font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>Oops — something got tangled</div><p className="text-xs text-muted-foreground mb-4">It's not you, it's us. We logged the issue and are looking into it.</p><div className="flex justify-center gap-2"><button className="bg-foreground text-background text-xs px-4 py-2 rounded-full">Try again</button><button className="border border-border text-xs px-4 py-2 rounded-full">Contact us</button></div></div>}
+      after={<div className="w-full p-8 text-center"><motion.div animate={{ rotate: [-5, 5, -5] }} transition={{ duration: 1, repeat: Infinity }} className="text-4xl mb-3">😬</motion.div><div className="text-base font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>Oops — something got tangled</div><p className="text-xs text-muted-foreground mb-4">It's not you, it's us. We logged the issue and are looking into it.</p><div className="flex justify-center gap-2"><button className="bg-foreground text-background text-xs px-4 py-2 rounded-full">Try again</button><button className="border border-border text-xs px-4 py-2 rounded-full">Contact us</button></div></div>}
     />),
     "habit-formation": (<DemoShell beforeLabel="No streak" afterLabel="Streak active"
       before={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto text-center"><div className="text-sm font-medium mb-2">Today's practice</div><p className="text-xs text-muted-foreground mb-5">Complete your daily vocabulary session.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Start session</button></div></div>}
-      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto"><div className="flex items-center justify-between mb-4"><div className="text-sm font-medium">Today's practice</div><div className="flex items-center gap-1 text-xs font-mono bg-card px-2 py-1 rounded-full"><span>🔥</span><span className="font-bold">14</span><span className="text-muted-foreground">day streak</span></div></div><div className="flex gap-1 mb-4">{Array.from({length:7}).map((_,i)=><div key={i} className={`flex-1 h-6 rounded ${i<6?"bg-accent":"bg-muted border border-accent"} flex items-center justify-center text-[9px] ${i<6?"text-background":"text-accent"}`}>{i<6?"✓":"→"}</div>)}</div><button className="w-full bg-foreground text-background text-xs py-2.5 rounded-full">Keep your streak alive →</button></div></div>}
+      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border p-5 max-w-xs mx-auto"><div className="flex items-center justify-between mb-4"><div className="text-sm font-medium">Today's practice</div><div className="flex items-center gap-1 text-xs font-mono bg-card px-2 py-1 rounded-full"><span>🔥</span><span className="font-bold">14</span><span className="text-muted-foreground">day streak</span></div></div><div className="flex gap-1 mb-4">{Array.from({ length: 7 }).map((_, i) => <div key={i} className={`flex-1 h-6 rounded ${i < 6 ? "bg-accent" : "bg-muted border border-accent"} flex items-center justify-center text-[9px] ${i < 6 ? "text-background" : "text-accent"}`}>{i < 6 ? "✓" : "→"}</div>)}</div><button className="w-full bg-foreground text-background text-xs py-2.5 rounded-full">Keep your streak alive →</button></div></div>}
     />),
     "anchoring-bias": (<DemoShell beforeLabel="Flat options" afterLabel="Anchored options"
-      before={<div className="w-full p-5"><div className="grid grid-cols-3 gap-3">{[{n:"Basic",p:"$9"},{n:"Pro",p:"$29"},{n:"Team",p:"$79"}].map(t=><div key={t.n} className="border border-border p-4 rounded-xl text-center text-xs"><div className="font-medium">{t.n}</div><div className="text-xl font-bold my-1">{t.p}</div><div className="text-muted-foreground text-[10px]">/month</div></div>)}</div></div>}
-      after={<div className="w-full p-5"><div className="grid grid-cols-3 gap-3">{[{n:"Enterprise",p:"$299",big:true,sub:"Most powerful"},{n:"Pro",p:"$79",d:"Best value",rec:true},{n:"Starter",p:"$19",d:"Get started"}].map(t=><div key={t.n} className={`p-3 rounded-xl border text-center text-xs ${t.big?"border-muted bg-background opacity-70":t.rec?"border-foreground bg-foreground text-background":"border-border"}`}>{t.sub&&<div className="text-[8px] font-mono mb-1 opacity-60">{t.sub}</div>}<div className="font-semibold text-[11px]">{t.n}</div><div className="text-base font-bold my-1">{t.p}</div><div className={`text-[9px] ${t.rec?"opacity-70":"text-muted-foreground"}`}>{t.d||""}</div></div>)}</div></div>}
+      before={<div className="w-full p-5"><div className="grid grid-cols-3 gap-3">{[{ n: "Basic", p: "$9" }, { n: "Pro", p: "$29" }, { n: "Team", p: "$79" }].map(t => <div key={t.n} className="border border-border p-4 rounded-xl text-center text-xs"><div className="font-medium">{t.n}</div><div className="text-xl font-bold my-1">{t.p}</div><div className="text-muted-foreground text-[10px]">/month</div></div>)}</div></div>}
+      after={<div className="w-full p-5"><div className="grid grid-cols-3 gap-3">{[{ n: "Enterprise", p: "$299", big: true, sub: "Most powerful" }, { n: "Pro", p: "$79", d: "Best value", rec: true }, { n: "Starter", p: "$19", d: "Get started" }].map(t => <div key={t.n} className={`p-3 rounded-xl border text-center text-xs ${t.big ? "border-muted bg-background opacity-70" : t.rec ? "border-foreground bg-foreground text-background" : "border-border"}`}>{t.sub && <div className="text-[8px] font-mono mb-1 opacity-60">{t.sub}</div>}<div className="font-semibold text-[11px]">{t.n}</div><div className="text-base font-bold my-1">{t.p}</div><div className={`text-[9px] ${t.rec ? "opacity-70" : "text-muted-foreground"}`}>{t.d || ""}</div></div>)}</div></div>}
     />),
     "loss-aversion": (<DemoShell beforeLabel="Gain framing" afterLabel="Loss framing"
-      before={<div className="w-full p-8 text-center"><div className="text-xl font-bold mb-2" style={{fontFamily:"Instrument Serif"}}>Upgrade to Pro</div><p className="text-xs text-muted-foreground mb-5">Get 100GB storage and advanced analytics.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Upgrade now</button></div>}
-      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border overflow-hidden max-w-xs mx-auto"><div className="bg-foreground text-background px-4 py-2 text-[10px] font-mono flex items-center gap-2"><span>⚠</span> Trial expires in <strong>3 days</strong></div><div className="p-4 text-center"><div className="text-lg font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>Don't lose your work</div><p className="text-[11px] text-muted-foreground mb-3">6 months of reports will be deleted when your trial ends.</p><button className="bg-foreground text-background text-xs px-5 py-2 rounded-full w-full">Keep my data — Upgrade</button><div className="text-[9px] text-muted-foreground mt-2">or let everything be deleted</div></div></div></div>}
+      before={<div className="w-full p-8 text-center"><div className="text-xl font-bold mb-2" style={{ fontFamily: "Instrument Serif" }}>Upgrade to Pro</div><p className="text-xs text-muted-foreground mb-5">Get 100GB storage and advanced analytics.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Upgrade now</button></div>}
+      after={<div className="w-full p-6"><div className="bg-background rounded-xl border border-border overflow-hidden max-w-xs mx-auto"><div className="bg-foreground text-background px-4 py-2 text-[10px] font-mono flex items-center gap-2"><span>⚠</span> Trial expires in <strong>3 days</strong></div><div className="p-4 text-center"><div className="text-lg font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>Don't lose your work</div><p className="text-[11px] text-muted-foreground mb-3">6 months of reports will be deleted when your trial ends.</p><button className="bg-foreground text-background text-xs px-5 py-2 rounded-full w-full">Keep my data — Upgrade</button><div className="text-[9px] text-muted-foreground mt-2">or let everything be deleted</div></div></div></div>}
     />),
     "social-proof": (<DemoShell beforeLabel="No social proof" afterLabel="With social proof"
-      before={<div className="w-full p-8 text-center"><div className="text-xl font-bold mb-2" style={{fontFamily:"Instrument Serif"}}>Try it free for 14 days</div><p className="text-xs text-muted-foreground mb-5">No credit card required.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Get started</button></div>}
-      after={<div className="w-full p-6"><div className="text-center mb-4"><div className="flex justify-center gap-1 mb-1">{[...Array(5)].map((_,i)=><span key={i} className="text-accent">★</span>)}</div><div className="text-xs font-medium">4.9 out of 5</div><div className="text-[10px] text-muted-foreground">From 2,841 reviews</div></div><div className="flex justify-center gap-3 mb-4 opacity-50">{["STRIPE","NOTION","LINEAR","VERCEL"].map(b=><div key={b} className="text-[9px] font-mono font-bold tracking-widest">{b}</div>)}</div><div className="bg-background rounded-xl border border-border p-3 text-[11px] mb-3"><div className="font-medium mb-1">"Shipped our onboarding in a week"</div><div className="text-muted-foreground">— Maya T., Head of Product at Finch</div></div><div className="text-center text-[10px] text-muted-foreground"><span className="font-bold text-foreground">23 people</span> signed up in the last hour</div></div>}
+      before={<div className="w-full p-8 text-center"><div className="text-xl font-bold mb-2" style={{ fontFamily: "Instrument Serif" }}>Try it free for 14 days</div><p className="text-xs text-muted-foreground mb-5">No credit card required.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full">Get started</button></div>}
+      after={<div className="w-full p-6"><div className="text-center mb-4"><div className="flex justify-center gap-1 mb-1">{[...Array(5)].map((_, i) => <span key={i} className="text-accent">★</span>)}</div><div className="text-xs font-medium">4.9 out of 5</div><div className="text-[10px] text-muted-foreground">From 2,841 reviews</div></div><div className="flex justify-center gap-3 mb-4 opacity-50">{["STRIPE", "NOTION", "LINEAR", "VERCEL"].map(b => <div key={b} className="text-[9px] font-mono font-bold tracking-widest">{b}</div>)}</div><div className="bg-background rounded-xl border border-border p-3 text-[11px] mb-3"><div className="font-medium mb-1">"Shipped our onboarding in a week"</div><div className="text-muted-foreground">— Maya T., Head of Product at Finch</div></div><div className="text-center text-[10px] text-muted-foreground"><span className="font-bold text-foreground">23 people</span> signed up in the last hour</div></div>}
     />),
     "decision-fatigue": (<DemoShell beforeLabel="All options exposed" afterLabel="Smart default"
-      before={<div className="w-full p-5"><div className="text-xs font-medium mb-3">Configure your workspace:</div><div className="space-y-2">{["Choose theme (12 options)","Select sidebar layout (6 options)","Configure notifications (18 options)","Set timezone (400+ options)","Choose date format (8 options)","Privacy level (5 options)"].map(item=><div key={item} className="flex items-center justify-between border border-border rounded px-3 py-2 text-[10px]"><span className="text-muted-foreground">{item}</span><span className="text-accent">▾</span></div>)}</div></div>}
-      after={<div className="w-full p-7 text-center"><div className="text-3xl mb-3">✨</div><div className="text-base font-bold mb-1" style={{fontFamily:"Instrument Serif"}}>You're all set</div><p className="text-xs text-muted-foreground mb-4">We've configured everything based on how your team works. Adjust anytime.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full mb-3">Take me in</button><div className="text-[10px] text-muted-foreground underline">Customize settings →</div></div>}
+      before={<div className="w-full p-5"><div className="text-xs font-medium mb-3">Configure your workspace:</div><div className="space-y-2">{["Choose theme (12 options)", "Select sidebar layout (6 options)", "Configure notifications (18 options)", "Set timezone (400+ options)", "Choose date format (8 options)", "Privacy level (5 options)"].map(item => <div key={item} className="flex items-center justify-between border border-border rounded px-3 py-2 text-[10px]"><span className="text-muted-foreground">{item}</span><span className="text-accent">▾</span></div>)}</div></div>}
+      after={<div className="w-full p-7 text-center"><div className="text-3xl mb-3">✨</div><div className="text-base font-bold mb-1" style={{ fontFamily: "Instrument Serif" }}>You're all set</div><p className="text-xs text-muted-foreground mb-4">We've configured everything based on how your team works. Adjust anytime.</p><button className="bg-foreground text-background text-xs px-6 py-2.5 rounded-full mb-3">Take me in</button><div className="text-[10px] text-muted-foreground underline">Customize settings →</div></div>}
     />),
     "cognitive-load": (<DemoShell beforeLabel="One long form" afterLabel="Step-by-step"
-      before={<div className="w-full p-5"><div className="text-xs font-medium mb-3">Create your account:</div><div className="space-y-2">{["Full name","Email address","Password","Confirm password","Company name","Company size","Job title","Department","Phone number","Referral code"].map(f=><div key={f} className="border border-border rounded px-3 py-1.5 text-[10px] text-muted-foreground bg-background">{f}</div>)}<button className="w-full bg-foreground text-background text-xs py-2 rounded mt-1">Create account</button></div></div>}
-      after={<div className="w-full p-6"><div className="flex items-center gap-2 mb-5">{[1,2,3].map((s,i)=><div key={s} className="flex items-center gap-2"><div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-medium ${i===0?"bg-foreground text-background":"border border-muted-foreground text-muted-foreground"}`}>{s}</div>{i<2&&<div className="flex-1 h-px bg-border w-8"/>}</div>)}<div className="ml-auto text-[10px] text-muted-foreground">Step 1 of 3</div></div><div className="text-sm font-medium mb-3">Basic info</div><div className="space-y-2 mb-4">{["Full name","Email address","Password"].map(f=><div key={f} className="border border-border rounded-lg px-3 py-2 text-xs text-muted-foreground bg-background">{f}</div>)}</div><button className="w-full bg-foreground text-background text-xs py-2.5 rounded-full">Continue →</button></div>}
+      before={<div className="w-full p-5"><div className="text-xs font-medium mb-3">Create your account:</div><div className="space-y-2">{["Full name", "Email address", "Password", "Confirm password", "Company name", "Company size", "Job title", "Department", "Phone number", "Referral code"].map(f => <div key={f} className="border border-border rounded px-3 py-1.5 text-[10px] text-muted-foreground bg-background">{f}</div>)}<button className="w-full bg-foreground text-background text-xs py-2 rounded mt-1">Create account</button></div></div>}
+      after={<div className="w-full p-6"><div className="flex items-center gap-2 mb-5">{[1, 2, 3].map((s, i) => <div key={s} className="flex items-center gap-2"><div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-medium ${i === 0 ? "bg-foreground text-background" : "border border-muted-foreground text-muted-foreground"}`}>{s}</div>{i < 2 && <div className="flex-1 h-px bg-border w-8" />}</div>)}<div className="ml-auto text-[10px] text-muted-foreground">Step 1 of 3</div></div><div className="text-sm font-medium mb-3">Basic info</div><div className="space-y-2 mb-4">{["Full name", "Email address", "Password"].map(f => <div key={f} className="border border-border rounded-lg px-3 py-2 text-xs text-muted-foreground bg-background">{f}</div>)}</div><button className="w-full bg-foreground text-background text-xs py-2.5 rounded-full">Continue →</button></div>}
     />),
   };
   return <div className="w-full">{demos[patternId] || (<DemoShell before={<div className="p-8 text-center text-sm text-muted-foreground">Before: Without this pattern</div>} after={<div className="p-8 text-center text-sm text-muted-foreground">After: With this pattern applied</div>} />)}</div>;
@@ -499,37 +578,35 @@ function NetworkView({ onPatternSelect, onTopPatternsChange }: {
     return [...top3, ...PATTERNS.filter((p) => !topIds.has(p.id))];
   };
 
-  const handleInitialQuery = (query: string) => {
+  const handleInitialQuery = async (query: string) => {
     setMessages([{ role: "user", content: query }]);
     setLayoutMode("thinking");
     setSpeedTarget(3.8);
 
-    setTimeout(() => {
-      setSpeedTarget(0.18); // slow down
-      const top3 = scorePatterns(query, PATTERNS);
-      const explanation = generateExplanation(query, top3);
-      setTimeout(() => {
-        setTopPatterns(top3);
-        onTopPatternsChange(top3);
-        setMessages([{ role: "user", content: query }, { role: "ai", content: explanation }]);
-        setLayoutMode("results");
-      }, 680);
-    }, 2100);
+    const top3 = scorePatterns(query, PATTERNS);
+    const explanation = await generateExplanation(query, top3);
+
+    setSpeedTarget(0.18);
+    setTopPatterns(top3);
+    onTopPatternsChange(top3);
+    setMessages([{ role: "user", content: query }, { role: "ai", content: explanation }]);
+    setLayoutMode("results");
   };
 
-  const handleFollowUp = (text: string) => {
+  const handleFollowUp = async (text: string) => {
     const next = [...messages, { role: "user" as const, content: text }];
     setMessages(next);
     setIsProcessing(true);
-    setTimeout(() => {
-      const allUserText = next.filter((m) => m.role === "user").map((m) => m.content).join(" ");
-      const top3 = scorePatterns(allUserText, PATTERNS);
-      const explanation = generateExplanation(text, top3);
-      setTopPatterns(top3);
-      onTopPatternsChange(top3);
-      setMessages([...next, { role: "ai", content: explanation }]);
-      setIsProcessing(false);
-    }, 1500);
+
+    const allUserText = next.filter((m) => m.role === "user").map((m) => m.content).join(" ");
+    const top3 = scorePatterns(allUserText, PATTERNS);
+
+    const explanation = await generateExplanation(text, top3, messages);
+
+    setTopPatterns(top3);
+    onTopPatternsChange(top3);
+    setMessages([...next, { role: "ai", content: explanation }]);
+    setIsProcessing(false);
   };
 
   const handleCardClick = (pattern: Pattern) => {
