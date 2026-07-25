@@ -205,7 +205,11 @@ Be conversational, direct, and practical. Reference what the user said before wh
     { role: 'user' as const, content: query }
   ];
 
-  const response = await fetch('/api/v1/messages', {
+  const apiUrl = import.meta.env.DEV
+    ? '/api/v1/messages'
+    : 'https://api.anthropic.com/v1/messages'
+
+  const response = await fetch(apiUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -219,6 +223,8 @@ Be conversational, direct, and practical. Reference what the user said before wh
       messages
     })
   });
+
+
 
   const data = await response.json();
   return data.content[0].text;
