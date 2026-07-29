@@ -4,11 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      'react/jsx-runtime': 'react/jsx-runtime.js'
-    }
-  },
   server: {
     proxy: {
       '/api': {
